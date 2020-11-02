@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Index</title>
+</head>
+<body>
+
+<form>
+    <input type="text" id="text-input" name="text-input">
+</form>
+<button onclick="addWords()">Add Words</button>
+<br>
+<br>
+<form>
+    <input type="number" id="input-field" name="input-field">
+</form>
+<button onclick="printWords()">Print Words of this length</button>  
+
+
+<p id="result"></p>
+
+</body>
+<script>
+let words = ['hallo', 'Auto', 'Waschmaschine', 'Schrank', 'Katze', 'Beispiel', 'Eltern', 'Fenster', 'Geburtstag', 'Himmel', 'schwimmen', 'Zeitung']
+
+addWords = () => {
+    let userWordInput = document.getElementById('text-input').value
+    words.push(userWordInput)
+    console.log(words);
+}
+
+
+printWords = () => {
+    event.preventDefault()
+    let desiredLength = document.getElementById('input-field').value
+    words.forEach(
+        (item) => {
+            if (item.length == desiredLength ) {
+                document.getElementById('result').innerHTML += `${item} <br>`
+            }
+        }
+    )
+}
+
+
+
+</script>
+</html>
