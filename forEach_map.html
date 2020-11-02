@@ -12,7 +12,7 @@
 
 <script>
     let getraenke = [
-   "Coca-Cola",
+    "Coca-Cola",
    "Apfelsaft",
    "Pepsi",
    "Traubensaft",
@@ -22,17 +22,35 @@
    "Fanta"
 ]
 
-myDrinks = (elt) => {
-    getraenke.sort()
-    getraenke.forEach(
-        (item) => {
-            console.log(item)
-            document.write(`${elt} <br>`)
-        }
-    )
-}
+let uppercaseDrinks = getraenke.map(
+    (item) => {                           // anonymous function declaration
+    return item.toUpperCase()             // function block - do this with each item
+} 
 
-myDrinks('Guinness')
+)
+console.log(uppercaseDrinks);
+
+
+
+
+
+
+
+
+
+// myDrinks = (elt) => {
+//     getraenke.sort()
+//     getraenke.forEach(
+//         (item) => {
+//             console.log(item)
+//             document.write(`${elt} <br>`)
+//         }
+//     )
+// }
+
+// myDrinks('Guinness')
+
+
 
 
 
