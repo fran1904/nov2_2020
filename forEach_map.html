@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    hi ther, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+    let getraenke = [
+   "Coca-Cola",
+   "Apfelsaft",
+   "Pepsi",
+   "Traubensaft",
+   "Sprite",
+   "Orangensaft",
+   "Red Bull Energy Drink",
+   "Fanta"
+]
+
+myDrinks = (elt) => {
+    getraenke.sort()
+    getraenke.forEach(
+        (item) => {
+            console.log(item)
+            document.write(`${elt} <br>`)
+        }
+    )
+}
+
+myDrinks('Guinness')
+
+
+
+</script>
+</html>
